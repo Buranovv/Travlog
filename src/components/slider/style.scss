@@ -1,0 +1,72 @@
+.destinationSlider {
+  .slick-arrow {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 100px;
+
+    display: block !important;
+
+    background: #5d50c6 !important;
+
+    top: -120px !important;
+  }
+
+  .slick-next::before {
+    content: url("../../../public/images/next.svg") !important;
+
+    color: #fff !important;
+  }
+  .slick-prev::before {
+    content: url("../../../public/images/prev.svg") !important;
+
+    color: #fff !important;
+  }
+
+  .slick-prev {
+    right: 0 !important;
+    left: 1000px !important;
+  }
+  .slick-prev::before {
+    right: 0 !important;
+    left: 1100px !important;
+  }
+}
+
+@media (max-width: 1301px) {
+  .destinationSlider {
+    .slick-prev {
+      right: 0 !important;
+      left: 720px !important;
+    }
+    .slick-next {
+      left: 850px !important;
+    }
+    .slick-prev::before {
+      right: 0 !important;
+      left: 1100px !important;
+    }
+  }
+}
+@media (max-width: 1040px) {
+  .destinationSlider {
+    .slick-prev {
+      right: 0 !important;
+      left: 680px !important;
+    }
+    .slick-next {
+      left: 750px !important;
+    }
+
+    .slick-arrow {
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .destinationSlider {
+    .slick-arrow {
+      display: none !important;
+    }
+  }
+}

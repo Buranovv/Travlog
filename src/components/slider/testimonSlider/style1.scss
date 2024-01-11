@@ -1,0 +1,35 @@
+.testimonSlider {
+  .slick-arrow {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 100px;
+
+    display: block !important;
+
+    background: #5d50c6 !important;
+
+    z-index: 999 !important;
+  }
+
+  .slick-next::before {
+    content: url("../../../../public/images/next.svg") !important;
+
+    color: #fff !important;
+  }
+  .slick-prev::before {
+    content: url("../../../../public/images/prev.svg") !important;
+
+    color: #fff !important;
+  }
+  .slick-dots {
+    button::before {
+      font-size: 20px;
+      color: rgba(25, 24, 37, 0.5);
+    }
+    .slick-active {
+      button::before {
+        color: #f85e9f;
+      }
+    }
+  }
+}

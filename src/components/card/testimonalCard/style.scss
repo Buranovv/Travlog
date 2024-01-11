@@ -1,0 +1,45 @@
+.testimonCard {
+  max-width: 720px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .stars {
+    margin-bottom: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .avatar{
+    margin-bottom: 64px;
+    width: 70px;
+    height: 70px;
+  }
+  h5 {
+    margin-bottom: 32px;
+
+    span {
+      color: #ff5722;
+      font-size: 22px;
+      line-height: 120%;
+    }
+
+    color: rgba(25, 24, 37, 0.75);
+    font-size: 18px;
+    line-height: 120%;
+  }
+  p {
+    max-width: 900px;
+
+    color: rgba(25, 24, 37, 0.75);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 160%; /* 36.8px */
+  }
+}

@@ -1,0 +1,241 @@
+.header {
+  padding: 32px 0;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu-logo {
+    display: none;
+
+    cursor: pointer;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+
+    a {
+      padding: 16px 0;
+
+      color: rgba(25, 24, 37, 0.5);
+      font-size: 14px;
+      line-height: 120%;
+
+      transition: all 0.2s linear;
+    }
+    a:hover {
+      color: #222831;
+
+      transform: translateY(-5px);
+    }
+
+    .active {
+      color: #222831;
+    }
+    .active:hover {
+      transform: none;
+    }
+  }
+  &__btns {
+    button {
+      padding: 16px 32px;
+      border-radius: 100px;
+      border: none;
+
+      font-family: Sen;
+      font-size: 14px;
+      line-height: 120%;
+
+      cursor: pointer;
+    }
+    .logIn {
+      background: none;
+      color: #222831;
+
+      transition: all 0.2s linear;
+    }
+    .signUp {
+      color: #fff;
+      background: #5d50c6;
+
+      transition: all 0.2s linear;
+    }
+    .signUp:hover {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+      transform: translateY(-5px);
+    }
+    .logIn:hover {
+      opacity: 0.8;
+      transform: translateY(-5px);
+    }
+    .signUp:active {
+      box-shadow: none;
+    }
+    .logIn:active {
+      opacity: 1;
+    }
+  }
+  &__menu-box {
+    width: 100%;
+    height: 100vh;
+
+    background: #00000050;
+
+    display: none;
+
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+
+    transition: all 0.2s linear;
+    overflow: hidden !important;
+  }
+  &__menu-list {
+    width: 230px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 101 !important;
+
+    transform: translateX(400px);
+    transition: all 0.2s ease-in;
+    overflow: hidden !important;
+
+    a {
+      padding: 15px 15px;
+
+      font-size: 20px;
+      color: #5d50c690;
+    }
+    .signUp {
+      width: 100%;
+
+      position: absolute;
+      bottom: 0;
+
+      text-align: center;
+      color: #fff !important;
+      background: #5d50c6;
+    }
+    .signUp:hover {
+      background: #4536b8;
+    }
+    .active {
+      color: #5d50c6;
+    }
+  }
+  &__menu-close {
+    padding: 0 15px;
+
+    .box {
+      width: 35px;
+      height: 35px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.header::before {
+  content: url("../../../public/images/dec3.svg");
+
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+@media (max-width: 1300px) {
+  .header::before {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media (max-width: 1000px) {
+  .header {
+    padding: 28px 0;
+    &__logo {
+      img {
+        width: 122px;
+        height: 36px;
+      }
+    }
+    &__nav {
+      gap: 40px;
+    }
+    &__btns {
+      button {
+        padding: 12px 28px;
+      }
+    }
+  }
+}
+@media (max-width: 795px) {
+  .header {
+    padding: 22px 0;
+
+    &__logo {
+      img {
+        width: 100px;
+        height: 30px;
+      }
+    }
+    &__nav {
+      gap: 25px;
+    }
+    &__btns {
+      button {
+        padding: 8px 20px;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .header {
+    &__logo {
+      img {
+        width: 100px;
+        height: 30px;
+      }
+    }
+    &__nav,
+    &__btns {
+      display: none;
+    }
+    &__menu-logo {
+      display: block;
+    }
+    .open {
+      display: block;
+    }
+    .menu-open {
+      display: flex;
+
+      transform: translateX(0);
+    }
+  }
+}
+@media (max-width: 646px) {
+  .header::before {
+   display: none;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    padding: 10px 0;
+  }
+}

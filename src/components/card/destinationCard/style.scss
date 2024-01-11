@@ -1,0 +1,88 @@
+.destinationCard {
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 0px 0px 32px 32px;
+
+  background: #fff;
+
+  position: relative;
+  z-index: 10;
+
+  .cardBody {
+    padding: 32px;
+  }
+
+  .description {
+    display: flex;
+
+    h5 {
+      width: 205px;
+      margin-bottom: 16px;
+
+      color: #191825;
+      font-size: 23px;
+      line-height: 120%;
+    }
+    p {
+      color: #f85e9f;
+      font-size: 23px;
+      line-height: 120%;
+    }
+  }
+  .city {
+    margin-bottom: 32px;
+
+    color: rgba(25, 24, 37, 0.75);
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 160%;
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #ff5722;
+    font-size: 23px;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: 400px) {
+  .destinationCard {
+    width: 100%;
+    text-align: center;
+
+    .img {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+    .description {
+      flex-direction: column;
+      h5 {
+        width: 150px;
+        margin: 0 auto;
+        margin-bottom: 14px;
+
+        font-size: 18px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .city {
+      margin-bottom: 22px;
+
+      font-size: 14px;
+    }
+    .rating {
+justify-content: center;
+      font-size: 18px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
